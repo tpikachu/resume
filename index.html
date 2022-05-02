@@ -18,7 +18,7 @@
 
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/background.css">
-  <link rel="preload" href="./assets/bgms/Feel-Good.mp3">
+  <link rel="preload" href="./assets/bgms/Feel-Good.mp3" as='audio'>
   <!--
     - google font link
   -->
@@ -30,6 +30,10 @@
 </head>
 
 <body>
+  <audio id="bgm" autoplay loop>
+    <source src="./assets/bgms/Feel-Good.mp3" type="audio/mpeg" />
+  </audio>
+
   <div class='background'>
     <div class='light x1'></div>
     <div class='light x2'></div>
@@ -41,10 +45,6 @@
     <div class='light x8'></div>
     <div class='light x9'></div>
   </div>
-  <audio id="bgm" autoplay loop>
-    <a href="./assets/bgms/Feel-Good.mp3">foo.mp3</a>
-    <source src="./assets/bgms/Feel-Good.mp3" type="audio/mpeg" />
-  </audio>
 
 
   <!--
