@@ -1,6 +1,7 @@
 'use strict';
 
-
+const audio = document.getElementById("bgm");
+audio.volume = 0.2;
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
