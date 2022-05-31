@@ -1,6 +1,7 @@
 'use strict';
 
-
+const audio = document.getElementById("bgm");
+audio.volume = 0.2;
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
@@ -164,8 +165,9 @@ contactForm.onsubmit = function(e) {
   e.preventDefault();
   // const fullName = document.contactForm.fullname.value;
   // const email = document.contactForm.email.value;
+  const receiver = 'lwc.michael7@gmail.com';
   const message = document.contactForm.message.value;
   const subject = document.contactForm.subject.value;
 
-  window.open(`mailto:lwc.michael7@gmail.com?subject=${subject}&body=${message}`, "__blank");
+  window.open(`mailto:lwc.michael7@gmail.com?to=${receiver}&subject=${subject}&body=${message}`, "__blank");
 }

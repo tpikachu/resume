@@ -15,17 +15,37 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
 
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/background.css">
+  <link rel="preload" href="./assets/bgms/Feel-Good.mp3" as='audio'>
   <!--
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- <embed src="./assets/bgms/Feel-Good.mp3" loop="true" autostart style="position: absolute"/> -->
 </head>
 
 <body>
+  <audio id="bgm" autoplay loop volume=0.2>
+    <source src="./assets/bgms/Feel-Good.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class='background'>
+    <div class='light x1'></div>
+    <div class='light x2'></div>
+    <div class='light x3'></div>
+    <div class='light x4'></div>
+    <div class='light x5'></div>
+    <div class='light x6'></div>
+    <div class='light x7'></div>
+    <div class='light x8'></div>
+    <div class='light x9'></div>
+  </div>
+
 
   <!--
     - #MAIN
@@ -74,7 +94,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:lwc.michael&@gmail.com" class="contact-link">lwc.michael7@gmail.com</a>
+              <a href="mailto:lwc.michael7@gmail.com" class="contact-link">lwc.michael7@gmail.com</a>
             </div>
 
           </li>
@@ -175,7 +195,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio(Only public projects)</button>
+            <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
           <li class="navbar-item">
@@ -405,6 +425,19 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
+                <h5 class="h5">Typescript</h5>
+                <data value="100">100%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
                 <h5 class="h5">Electron</h5>
                 <data value="100">100%</data>
               </div>
@@ -419,11 +452,37 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">React</h5>
-                <data value="95">95%</data>
+                <data value="100">100%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 95%;"></div>
+                <div class="skill-progress-fill" style="width: 100%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">React Native</h5>
+                <data value="100">100%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Redux</h5>
+                <data value="100">100%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%;"></div>
               </div>
 
             </li>
@@ -432,11 +491,11 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">Vue</h5>
-                <data value="95">95%</data>
+                <data value="100">100%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 95%;"></div>
+                <div class="skill-progress-fill" style="width: 100%;"></div>
               </div>
 
             </li>
@@ -445,11 +504,11 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">Node</h5>
-                <data value="95">95%</data>
+                <data value="100">100%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 95%;"></div>
+                <div class="skill-progress-fill" style="width: 100%;"></div>
               </div>
 
             </li>
@@ -471,11 +530,11 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">Google API</h5>
-                <data value="90">90%</data>
+                <data value="95">95%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
+                <div class="skill-progress-fill" style="width: 95%;"></div>
               </div>
 
             </li>
@@ -524,11 +583,11 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">C++/C#</h5>
-                <data value="75">75%</data>
+                <data value="80">80%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
+                <div class="skill-progress-fill" style="width: 80%;"></div>
               </div>
 
             </li>
@@ -560,7 +619,7 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio(only public projects)">
+      <article class="portfolio" data-page="portfolio">
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
@@ -781,8 +840,6 @@
     </div>
 
   </main>
-
-
 
 
 
