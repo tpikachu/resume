@@ -116,6 +116,55 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
+// lightbox variables
+const lightbox = document.querySelector("[data-lightbox]");
+const lightboxImg = document.querySelector("[data-lightbox-img]");
+const lightboxCaption = document.querySelector("[data-lightbox-caption]");
+const lightboxClose = document.querySelector("[data-lightbox-close]");
+const projectLinks = document.querySelectorAll(".project-item > a");
+
+const openLightbox = function (img, title) {
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  lightboxCaption.innerText = title ? title.innerText : "";
+  lightbox.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+const closeLightbox = function () {
+  lightbox.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+// open the image in a lightbox when a project has no destination link
+for (let i = 0; i < projectLinks.length; i++) {
+  projectLinks[i].addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+
+    if (!href || href === "#") {
+      e.preventDefault();
+      openLightbox(
+        this.querySelector(".project-img img"),
+        this.querySelector(".project-title")
+      );
+    }
+  });
+}
+
+lightboxClose.addEventListener("click", closeLightbox);
+
+// close when clicking the dimmed backdrop (but not the image itself)
+lightbox.addEventListener("click", function (e) {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// close on Escape
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && lightbox.classList.contains("active")) closeLightbox();
+});
+
+
+
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
